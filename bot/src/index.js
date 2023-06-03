@@ -1,10 +1,10 @@
-require('dotenv').config()
+require('dotenv').config();
 const fs = require('node:fs');
 const path = require('node:path');
-const token = process.env.token
+const token = process.env.token;
 
-const { Client, GatewayIntentBits, Collection, Events, EmbedBuilder, PermissionsBitField, Permissions } = require(`discord.js`)
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] })
+const { Client, GatewayIntentBits, Collection } = require('discord.js');
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
 client.commands = new Collection();
 const foldersPath = path.join(__dirname, 'commands');
@@ -38,4 +38,4 @@ for (const file of eventFiles) {
     }
 }
 
-client.login(`${token}`)
+client.login(`${token}`);
