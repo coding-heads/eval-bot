@@ -5,7 +5,7 @@ const buildEmbed = (description, image, thumbnail, fieldsArr) => {
     // const imageFile = new AttachmentBuilder(image);
     // const thumbnailFile = new AttachmentBuilder(thumbnail);
     const embed = new EmbedBuilder()
-        .setColor(0x0099FF)
+        .setColor(0x0099ff)
         .setDescription(description)
         .addFields(fieldsArr);
     // set images and thumbnails with this path
@@ -18,5 +18,5 @@ const buildEmbed = (description, image, thumbnail, fieldsArr) => {
 };
 
 module.exports = {
-    buildEmbed
+    buildEmbed,
 };
