@@ -28,7 +28,7 @@ docker-compose up -d api
 You can verify this is running correctly with cURL
 
 ```sh
-curl 0.0.0.0:2000
+curl localhost:2000
 ```
 
 Now that the API is up and running, you can use the provided CLI tool to install runtimes. For example:
