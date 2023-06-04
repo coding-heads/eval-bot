@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const BASE_URL = '0.0.0.0:2000';
+const BASE_URL = 'http://localhost:2000';
 const EXECUTE_ENDPOINT = '/api/v2/execute';
 
 const executeCode = async (code, lang) => {
@@ -28,7 +28,6 @@ const executeCode = async (code, lang) => {
     });
 
     const data = await response.json();
-    console.log(data);
     return data;
 };
 
