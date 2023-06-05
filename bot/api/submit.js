@@ -1,5 +1,3 @@
-const fetch = require('node-fetch');
-
 const BASE_URL = 'http://localhost:2000';
 const EXECUTE_ENDPOINT = '/api/v2/execute';
 

@@ -6,7 +6,7 @@ const buildEmbed = (description, image, thumbnail, fieldsArr) => {
     // const thumbnailFile = new AttachmentBuilder(thumbnail);
     const embed = new EmbedBuilder()
         .setColor(0x0099ff)
-        .setDescription(description)
+        // .setDescription(description)
         .addFields(fieldsArr);
     // set images and thumbnails with this path
     // .setImage(`attachment://${image.match(/[a-zA-Z._-]*$/)[0]}`)
