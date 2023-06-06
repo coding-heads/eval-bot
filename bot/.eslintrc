@@ -13,7 +13,8 @@
         "sourceType": "script"
     },
     "plugins": [
-        "prettier"
+        "prettier",
+        "jest"
     ],
     "rules": {
         "indent": [
