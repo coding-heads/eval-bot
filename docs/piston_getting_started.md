@@ -5,6 +5,10 @@
 Repo: https://github.com/engineer-man/piston
 Discord: https://discord.gg/engineerman
 
+## Description
+
+Piston is a high performance general purpose code execution engine. It excels at running untrusted and possibly malicious code without fear from any harmful effects.
+
 ## Installation
 
 Prerequisites:
@@ -36,6 +40,7 @@ Now that the API is up and running, you can use the provided CLI tool to install
 ```sh
 cli/index.js ppman install node
 ```
+> **Note** Change out `node` with any language from the list command below to install that runtime.
 
 You can verify runtime installations with the following command:
 
@@ -43,3 +48,6 @@ You can verify runtime installations with the following command:
 cli/index.js ppman list
 ```
 
+## Automated setup
+
+You can start both the discord bot and piston engine by simply running `npm start` from the root of the project.
