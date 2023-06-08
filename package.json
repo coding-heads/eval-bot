@@ -1,6 +1,23 @@
 {
-  "dependencies": {
-    "discord.js": "^14.11.0",
-    "dotenv": "^16.1.3"
-  }
+    "name": "eval-bot",
+    "version": "1.0.0",
+    "homepage": "https://github.com/coding-heads/eval-bot",
+    "description": "Discord code evaluation bot",
+    "author": "coding-heads",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/coding-heads/eval-bot/issues"
+    },
+    "main": "bot/src/index.js",
+    "scripts": {
+        "start": "concurrently \"node bot/src/deploy.commands.js && node bot/src/index.js\" \"cd piston && docker-compose up -d api\"",
+        "install": "concurrently \"cd bot && npm instal\" \"cd piston/cli && npm install\""
+    },
+    "dependencies": {
+        "discord.js": "^14.11.0",
+        "dotenv": "^16.1.3"
+    },
+    "devDependencies": {
+        "concurrently": "^8.1.0"
+    }
 }
