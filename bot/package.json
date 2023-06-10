@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint": "npx eslint src/**"
+    "lint": "npx eslint src/**.js"
   },
   "author": "",
   "license": "MIT",
