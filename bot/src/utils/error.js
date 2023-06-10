@@ -1,13 +1,13 @@
-const { buildEmbed } = require('./embed');
+const { buildThumbnailEmbed } = require('./embed');
 
 const sendErrorMessage = async (interaction, error) => {
     await interaction.followUp(
-        buildEmbed(
+        buildThumbnailEmbed(
             'Error!',
             'There was an error processing your command.',
-            '',
-            [{ name: 'Error', value: error }],
-            0xff0000
+            'error.png',
+            [{ name: 'Error', value: `${error}` }],
+            'ff0000'
         )
     );
 };

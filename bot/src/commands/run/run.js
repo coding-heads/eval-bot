@@ -1,4 +1,4 @@
-const { SlashCommandBuilder } = require('discord.js');
+const { SlashCommandBuilder, AttachmentBuilder } = require('discord.js');
 const { buildEmbed } = require('../../utils/embed');
 const { executeCode } = require('../../../api/submit.js');
 const { sendErrorMessage } = require('../../utils/error');
@@ -26,16 +26,18 @@ module.exports = {
         const code = interaction.options.getString('code');
         try {
             let response = await executeCode(code, language);
+            const file = new AttachmentBuilder('../../assets/error.png');
             await interaction.followUp(
                 buildEmbed(
                     'Run',
                     '@User, here is the output of your code',
                     '',
+                    file,
                     [
                         { name: 'Code:', value: `${code}` },
                         { name: 'Output:', value: `${response.run.output}` },
                     ],
-                    0x0000ff
+                    '0x0000ff'
                 )
             );
         } catch (err) {

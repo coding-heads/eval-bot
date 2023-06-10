@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require('discord.js');
+const { EmbedBuilder, AttachmentBuilder } = require('discord.js');
 
 const buildEmbed = (title, description, image, thumbnail, fieldsArr, color) => {
     // Using the AttachmentBuilder class, pass in paramters to object
@@ -18,6 +18,18 @@ const buildEmbed = (title, description, image, thumbnail, fieldsArr, color) => {
     // files: [imageFile, thumbnailFile]
 };
 
+const buildThumbnailEmbed = (title, description, thumbnail, fieldsArr, color) => {
+    const thumbnailFile = new AttachmentBuilder(`bot/src/assets/${thumbnail}`);
+    const embed = new EmbedBuilder()
+        .setTitle(title)
+        .setDescription(description)
+        .setColor(color)
+        .addFields(fieldsArr)
+        .setThumbnail(`attachment://${thumbnail}`);
+    return { embeds: [embed], files: [thumbnailFile] };
+};
+
 module.exports = {
     buildEmbed,
+    buildThumbnailEmbed,
 };
