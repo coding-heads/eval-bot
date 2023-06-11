@@ -1,12 +1,13 @@
-const { EmbedBuilder } = require('discord.js');
+const { EmbedBuilder, AttachmentBuilder } = require('discord.js');
 
-const buildEmbed = (description, image, thumbnail, fieldsArr) => {
+const buildEmbed = (title, description, image, thumbnail, fieldsArr, color) => {
     // Using the AttachmentBuilder class, pass in paramters to object
     // const imageFile = new AttachmentBuilder(image);
     // const thumbnailFile = new AttachmentBuilder(thumbnail);
     const embed = new EmbedBuilder()
-        .setColor(0x0099ff)
+        .setTitle(title)
         .setDescription(description)
+        .setColor(color)
         .addFields(fieldsArr);
     // set images and thumbnails with this path
     // .setImage(`attachment://${image.match(/[a-zA-Z._-]*$/)[0]}`)
@@ -17,6 +18,18 @@ const buildEmbed = (description, image, thumbnail, fieldsArr) => {
     // files: [imageFile, thumbnailFile]
 };
 
+const buildThumbnailEmbed = (title, description, thumbnail, fieldsArr, color) => {
+    const thumbnailFile = new AttachmentBuilder(`bot/src/assets/${thumbnail}`);
+    const embed = new EmbedBuilder()
+        .setTitle(title)
+        .setDescription(description)
+        .setColor(color)
+        .addFields(fieldsArr)
+        .setThumbnail(`attachment://${thumbnail}`);
+    return { embeds: [embed], files: [thumbnailFile] };
+};
+
 module.exports = {
     buildEmbed,
+    buildThumbnailEmbed,
 };

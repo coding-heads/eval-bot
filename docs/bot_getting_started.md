@@ -21,3 +21,7 @@ Invoke bot with `node bot/index.js`. This will launch the bot on your local mach
 ## Automated setup
 
 You can start both the discord bot and piston engine by simply running `npm start` from the root of the project.
+
+## Linting
+
+The project is set up with eslint and prettier. To run the lint check, use the command `npm run lint` from the bot directory. To auto-fix issues use the command `npm run lint -- --fix`.
