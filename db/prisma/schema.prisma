@@ -10,8 +10,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
-  id      Int     @id @default(autoincrement())
-  title   String
-  content String?
+model Problem {
+  id       Int     @id @default(autoincrement())
+  title    String
+  content  String?
+  solution String?
 }
