@@ -1,4 +1,4 @@
-const { buildThumbnailEmbed } = require('./embed');
+import { buildThumbnailEmbed } from './embed';
 
 const sendHelpMessage = async (interaction) => {
     await interaction.followUp(
@@ -20,4 +20,4 @@ const sendHelpMessage = async (interaction) => {
     );
 };
 
-module.exports = { sendHelpMessage };
+export { sendHelpMessage };

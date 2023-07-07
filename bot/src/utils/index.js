@@ -1,4 +1,5 @@
-const { sendErrorMessage } = require('./error');
-const { sendHelpMessage } = require('./help');
+import { buildEmbed, buildThumbnailEmbed } from './embed';
+import { sendHelpMessage } from './help';
+import { sendErrorMessage } from './error';
 
-module.exports = { sendErrorMessage, sendHelpMessage };
+export { buildEmbed, buildThumbnailEmbed, sendErrorMessage, sendHelpMessage };

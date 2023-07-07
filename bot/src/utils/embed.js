@@ -1,4 +1,4 @@
-const { EmbedBuilder, AttachmentBuilder } = require('discord.js');
+import { EmbedBuilder, AttachmentBuilder } from 'discord.js';
 
 const buildEmbed = (title, description, image, thumbnail, fieldsArr, color) => {
     // Using the AttachmentBuilder class, pass in paramters to object
@@ -29,7 +29,4 @@ const buildThumbnailEmbed = (title, description, thumbnail, fieldsArr, color) =>
     return { embeds: [embed], files: [thumbnailFile] };
 };
 
-module.exports = {
-    buildEmbed,
-    buildThumbnailEmbed,
-};
+export { buildEmbed, buildThumbnailEmbed };
