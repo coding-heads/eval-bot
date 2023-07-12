@@ -10,7 +10,7 @@ Prerequisites:
 
 - MySQL
 
-First, navigate to `/db` and install the package and dependencies with `npm install prisma --save-dev`
+First, navigate to `/db` and install the package and dependencies with `npm install`
 
 ## Environment 
 
