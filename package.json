@@ -11,7 +11,7 @@
     "main": "bot/src/index.js",
     "scripts": {
         "start": "concurrently \"node bot/src/deploy.commands.js && node bot/src/index.js\" \"cd piston && docker-compose up -d api\"",
-        "install": "concurrently \"cd bot && npm install\" \"cd piston/cli && npm install\""
+        "install": "concurrently \"cd bot && npm install\" \"cd piston/cli && npm install\" \"cd db && npm install\""
     },
     "dependencies": {
         "discord.js": "^14.11.0",
