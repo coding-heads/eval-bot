@@ -27,3 +27,7 @@ Example: `DATABASE_URL="mysql://USER:PASSWORD@HOST:PORT/DATABASE"`. Be sure to p
 ## Migrations
 
 If changes are made to the schema, migrate with `npx prisma migrate dev --name NAME`
+
+## Testing
+
+Some demo database queries are set up to test your local db. You can run these with `FILE=<file> npm test` with file being the name of the test file, not including `.test.ts`. For example: `FILE=update npm test`.

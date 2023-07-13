@@ -1,15 +1,11 @@
-import { updateProblems } from '../queries';
+import { deleteProblem } from '../queries';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
 const test = async () => {
-    const twoSum = await updateProblems(
-        'Two Sum',
-        'content',
-        'Updated content'
-    );
-    console.log(twoSum);
+    const problem = await deleteProblem('Two Sum');
+    console.log(problem);
 };
 
 test()
