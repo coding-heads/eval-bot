@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.ts",
     "scripts": {
-        "test": "ts-node prisma/__tests__/update.test.ts",
+        "test": "ts-node prisma/__tests__/$FILE.test.ts",
         "seed": "ts-node prisma/seed.ts"
     },
     "keywords": [],
